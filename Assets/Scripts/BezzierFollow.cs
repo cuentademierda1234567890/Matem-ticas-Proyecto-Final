@@ -21,6 +21,7 @@ public class BezzierFollow : MonoBehaviour
     {
         routeToGo = 0;
         tParam = 0f;
+        speedModifier = 0.25f;
         coroutineAllowed = true;
     }
 

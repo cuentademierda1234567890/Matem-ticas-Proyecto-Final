@@ -33,7 +33,7 @@ public class RandomStars : MonoBehaviour
 
         renderer.material.mainTextureOffset = new Vector2(0 ,Yoffset += Time.deltaTime * Y_offsetSpeed);
 
-        Debug.Log(numEstrellas);
+        //Debug.Log(numEstrellas);
 
     }
 

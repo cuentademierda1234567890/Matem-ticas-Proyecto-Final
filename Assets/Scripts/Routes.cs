@@ -10,6 +10,31 @@ public class Routes : MonoBehaviour
 
     private Vector3 gizmosPosition;
 
+    void Start()
+    {
+        int i = 0;
+        // Inicializa el array
+        controlPoints = new Transform[gameObject.transform.childCount];
+
+        // Añade los hijos al array
+        foreach (Transform controlPoint in this.gameObject.transform)
+        {
+            controlPoints[i] = controlPoint.transform;
+            i++;
+        }
+
+        // Destruir Todas las esferas de cada Route
+        foreach (Transform controlPoint in this.gameObject.transform)
+        {
+            foreach (Transform esfera in controlPoint.transform)
+            {
+                Destroy(esfera.gameObject);
+            }
+        }
+
+    }
+
+
     private void OnDrawGizmos()
     {
         for (float t = 0; t <= 1; t += 0.025f)

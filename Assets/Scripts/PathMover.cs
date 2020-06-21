@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BezzierFollow : MonoBehaviour
+public class PathMover : MonoBehaviour
 {
     [SerializeField]
     public Transform[] routes;
@@ -19,7 +19,17 @@ public class BezzierFollow : MonoBehaviour
 
     void Start()
     {
-        
+        // Detecto cuando objetos existen con el tag "curva_bezier"
+        var rutas = GameObject.FindGameObjectsWithTag("curva_bezier");
+        // Luego Inicializo el array con la cantidad de objetos que existe con tag "curva_bezier"
+        routes = new Transform[rutas.Length];
+
+        var paths = GameObject.FindGameObjectsWithTag("Path");
+
+        foreach (GameObject Route in paths)
+        {
+            
+        }
 
         routeToGo = 0;
         tParam = 0f;
@@ -66,5 +76,4 @@ public class BezzierFollow : MonoBehaviour
         coroutineAllowed = true;
 
     }
-
 }

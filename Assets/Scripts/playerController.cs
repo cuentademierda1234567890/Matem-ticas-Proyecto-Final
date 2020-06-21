@@ -34,7 +34,7 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (/*Input.GetButton("Fire1")*/ Input.GetMouseButtonDown(0) && Time.time > nextFire && !pauseMenu.GameIsPaused)
         {
             nextFire = Time.time + fireRate;
             Instantiate(shot_prefab, spawnSpot.transform.position, spawnSpot.transform.rotation);

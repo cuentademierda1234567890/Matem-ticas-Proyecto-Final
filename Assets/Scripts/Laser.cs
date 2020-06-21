@@ -23,11 +23,18 @@ public class Laser : MonoBehaviour
         rb.velocity = transform.forward * speed;
     }
 
+    void Update()
+    {
+        if (this.gameObject.transform.position.z > 9f)
+            Destroy(this.gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 
         GameObject.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "Score: " + EnemyGenerator.score++;     
         Destroy(other.gameObject);
+        Destroy(this.gameObject);
 
         //Debug.Log("Choca");
     }

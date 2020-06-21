@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2623585443411983492}
   - component: {fileID: 2623585443410984516}
   - component: {fileID: 2623585443015246540}
+  - component: {fileID: 947460459}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MonoBehaviour:
   routes:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!135 &947460459
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623585443408978052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.92
+  m_Center: {x: 0, y: -0.011736452, z: 0.35712108}
